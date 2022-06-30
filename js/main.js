@@ -2,6 +2,9 @@
 let cartIcon = document.querySelector('#cart-icon')
 let cart = document.querySelector('.cart')
 let cartCloseIcon = document.querySelector('#close-cart')
+let price = document.querySelector('.price')
+let priceList = document.querySelector('.product-list-price')
+
 
 //Open Cart
 cartIcon.onclick = ()=>{
@@ -11,6 +14,12 @@ cartIcon.onclick = ()=>{
 cartCloseIcon.onclick = ()=>{
     cart.classList.remove('active')
 }
+function radioPrice(price, product) {
+    document.querySelector(product).innerText = price;
+}
+
+
+
 
 //Cart Program
 if(document.readyState == 'loading'){
@@ -88,6 +97,7 @@ function addCartClicked(event) {
     var title = shopProducts.getElementsByClassName('product-title')[0].innerText
     var price = shopProducts.getElementsByClassName('price')[0].innerText
     var productImg = shopProducts.getElementsByClassName('product-img')[0].src
+    
     addProductToCart(title, price, productImg)
     updateTotal()
 }
