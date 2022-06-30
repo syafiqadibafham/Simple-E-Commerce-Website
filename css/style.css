@@ -199,6 +199,9 @@ header{
     font-weight: 500;
     cursor: pointer;
 }
+.checked {
+    color: orange;
+}
 .add-cart{
     position: flex;
     bottom: 0;

@@ -14,8 +14,9 @@ cartIcon.onclick = ()=>{
 cartCloseIcon.onclick = ()=>{
     cart.classList.remove('active')
 }
-function radioPrice(price, product) {
-    document.querySelector(product).innerText = price;
+function radioPrice(price, product, id) {
+    document.querySelector('.price.'+product).innerText = price;
+    document.querySelector('.rating.'+product).innerHTML = document.querySelector('.rating.'+product+'.'+id).innerHTML;
 }
 
 
@@ -99,12 +100,13 @@ function addCartClicked(event) {
     var title = shopProducts.getElementsByClassName('product-title')[0].innerText
     var price = shopProducts.getElementsByClassName('price')[0].innerText
     var productImg = shopProducts.getElementsByClassName('product-img')[0].src
-    
-    addProductToCart(title, price, productImg)
+    var rating = shopProducts.getElementsByClassName('rating')[0].innerHTML
+
+    addProductToCart(title, price, productImg, rating)
     updateTotal()
 }
 
-function addProductToCart(title, price, productImg){
+function addProductToCart(title, price, productImg, rating){
     var cartShopBox = document.createElement('div')
     cartShopBox.classList.add('cart-box')
     var cartItems = document.getElementsByClassName('cart-content')[0]
@@ -121,11 +123,13 @@ function addProductToCart(title, price, productImg){
             <div class="detail-box">
                 <div class="cart-product-title">${title}</div>
                 <div class="cart-price">${price}</div>
+                <div class="rating">${rating}</div>
                 <input type="number" value="1" class="cart-quantity">
             </div>
             <!-- Remove Cart -->
             <i class="bx bxs-trash-alt cart-remove"></i>`;
 
+    
     cartShopBox.innerHTML = cartBoxContent
     cartItems.append(cartShopBox)
     cartShopBox.getElementsByClassName('cart-remove')[0].addEventListener('click', removeCartItem)

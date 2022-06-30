@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- ICONS -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -48,18 +50,39 @@
             <div class="product-box">
                 <img src="img/holz.webp" alt="" class="product-img">
                 <h2 class="product-title">Exclusivholz</h2>
+                <div class="rating company-price1">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
                 <span>ab</span>
                 <span class="price company-price1">26,50€</span>
                 
                 <div class="product-list-price">
                     <form action="#">
                         <p class="other-price-title">Other Prices</p>
-                        <input type="radio" id="companyA" name="company-price1" onclick="radioPrice(this.value, '.price.'+this.name)" value="26,50€" checked>
+                        <input type="radio" id="companyA" name="company-price1" onclick="radioPrice(this.value, this.name, this.id)" value="26,50€" checked>
                         <label for="companyA" class="company-title">Company A</label>
-                        <span class="company-price">26,50€</span><br>  
-                        <input type="radio" id="companyB" name="company-price1" onclick="radioPrice(this.value, '.price.'+this.name)" value="28,00€">
-                        <label for="companyA" class="company-title">Company B</label>
-                        <span class="company-price">28,00€</span><br>  
+                        <span class="company-price">26,50€</span><br>
+                        <div class="rating company-price1 companyA">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <input type="radio" id="companyB" name="company-price1" onclick="radioPrice(this.value, this.name, this.id)" value="28,00€">
+                        <label for="companyB" class="company-title">Company B</label>
+                        <span class="company-price">28,00€</span><br>
+                        <div class="rating company-price1 companyB">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
                     </form>
                     
                 </div>
@@ -72,16 +95,37 @@
             <div class="product-box">
                 <img src="img/holz2.webp" alt="" class="product-img">
                 <h2 class="product-title">Glattkantbrett Fichte</h2>
+                <div class="rating company-price2">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
                 <span class="price company-price2">6,89€</span>
                 <div class="product-list-price">
                     <form action="#">
                         <p class="other-price-title">Other Prices</p>
-                        <input type="radio" id="companyA" name="company-price2" onclick="radioPrice(this.value,'.price.'+this.name)" value="6,89€" checked>
+                        <input type="radio" id="companyA" name="company-price2" onclick="radioPrice(this.value,this.name, this.id)" value="6,89€" checked>
                         <label for="companyA" class="company-title">Company A</label>
-                        <span class="company-price">6,89€</span><br>  
-                        <input type="radio" id="companyB" name="company-price2" onclick="radioPrice(this.value,'.price.'+this.name)" value="8,00€">
-                        <label for="companyA" class="company-title">Company B</label>
-                        <span class="company-price">8,00€</span><br>  
+                        <span class="company-price">6,89€</span><br>
+                        <div class="rating company-price2 companyA">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <input type="radio" id="companyB" name="company-price2" onclick="radioPrice(this.value,this.name, this.id)" value="8,00€">
+                        <label for="companyB" class="company-title">Company B</label>
+                        <span class="company-price">8,00€</span><br>
+                        <div class="rating company-price2 companyB">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
                     </form>
                     
                 </div>
@@ -93,16 +137,37 @@
             <div class="product-box">
                 <img src="img/Weco_Estrichsand.png" alt="" class="product-img">
                 <h2 class="product-title">Weco Estrichsand</h2>
+                <div class="rating company-price3">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
                 <span class="price company-price3">25,85€</span>
                 <div class="product-list-price">
                     <form action="#">
                         <p class="other-price-title">Other Prices</p>
-                        <input type="radio" id="companyA" name="company-price3" onclick="radioPrice(this.value,'.price.'+this.name)" value="25,85€" checked>
+                        <input type="radio" id="companyA" name="company-price3" onclick="radioPrice(this.value,this.name, this.id)" value="25,85€" checked>
                         <label for="companyA" class="company-title">Company A</label>
-                        <span class="company-price">25,85€</span><br>  
-                        <input type="radio" id="companyB" name="company-price3" onclick="radioPrice(this.value,'.price.'+this.name)" value="28,00€">
-                        <label for="companyA" class="company-title">Company B</label>
-                        <span class="company-price">28,00€</span><br>  
+                        <span class="company-price">25,85€</span><br>
+                        <div class="rating company-price3 companyA">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <input type="radio" id="companyB" name="company-price3" onclick="radioPrice(this.value,this.name, this.id)" value="28,00€">
+                        <label for="companyB" class="company-title">Company B</label>
+                        <span class="company-price">28,00€</span><br>
+                        <div class="rating company-price3 companyB">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
                     </form>
                     
                 </div>
@@ -114,16 +179,37 @@
             <div class="product-box">
                 <img src="img/brechsand.jpg" alt="" class="product-img">
                 <h2 class="product-title">Brechsand</h2>
+                <div class="rating company-price4">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
                 <span class="price company-price4">35,00€</span>
                 <div class="product-list-price">
                     <form action="#">
                         <p class="other-price-title">Other Prices</p>
-                        <input type="radio" id="companyA" name="company-price4" onclick="radioPrice(this.value,'.price.'+this.name)" value="35,00€" checked>
+                        <input type="radio" id="companyA" name="company-price4" onclick="radioPrice(this.value,this.name, this.id)" value="35,00€" checked>
                         <label for="companyA" class="company-title">Company A</label>
-                        <span class="company-price">35,00€</span><br>  
-                        <input type="radio" id="companyB" name="company-price4" onclick="radioPrice(this.value,'.price.'+this.name)" value="48,00€">
-                        <label for="companyA" class="company-title">Company B</label>
-                        <span class="company-price">48,00€</span><br>  
+                        <span class="company-price">35,00€</span><br>
+                        <div class="rating company-price4 companyA">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                        <input type="radio" id="companyB" name="company-price4" onclick="radioPrice(this.value,this.name, this.id)" value="48,00€">
+                        <label for="companyB" class="company-title">Company B</label>
+                        <span class="company-price">48,00€</span><br>
+                        <div class="rating company-price4 companyB">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
                     </form>
                     
                 </div>
@@ -135,6 +221,7 @@
     </section>
     <!-- Link to JS -->
     <script src="js/main.js"></script>
+    
     
 </body>
 </html>
