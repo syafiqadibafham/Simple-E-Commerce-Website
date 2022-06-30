@@ -115,16 +115,24 @@ header{
     cursor: pointer;
 }
 .total{
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: auto auto;;
     margin-top: 1.5rem;
     border-top: 1px solid var(--text-color);
+    align-content: end;
+    justify-content: end;
 }
 .total-title{
     font-size: 1rem;
     font-weight: 600;
 }
-.total-price{
+.fee-title{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.total-price,
+.fee-price{
     margin-left: 0.5rem;
 }
 .btn-buy{

@@ -74,9 +74,11 @@ function updateTotal() {
         var price = parseFloat(priceElement.innerText.replace("€","").replace(",","."))
         var quantity = quantityElement.value
         total = total + (price * quantity)
+        fee = Math.round(total * 5)/100
     }
+    document.getElementsByClassName('fee-price')[0].innerText = fee + '€'
     //Round Off cents
-    total = Math.round(total*100)/100
+    total = Math.round((total+fee)*100)/100
     document.getElementsByClassName('total-price')[0].innerText = total + '€'
     
 }
